@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*wir geben dem Spiel die Höhe 500px und die breite 400px. Für die birder nehmen wir 1px und wir machen sie schwarz, das overflow hidden ist dazu dar das die Balken nachdem sie den Spielbereich verlassen haben nicht mehr zu sehen sind */
+
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* wir geben dem block die breite 50px und die Höhe 500px da unser Spiel ja 500px hoch ist, backrgroundcolor wird grün, wir setzen left: 400px daher das die Säulen von der rechten Seite kommen und nicht links beginnen und ohne relativ würde das nicht funktionieren, animation ist dazu dar das die animation immer wiederholt wird und nicht nur 1 einmal kommt */
+
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: green;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+
+/*hier wird eine keyframes animation eingefügt, */
+
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+
+/*Wir geben dem Loch die Breite 50px und die höhe 150px und dies ist daher das die Position bei Block und whole relative ist*/
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+/*Wir haben wie immer eine Höhe und breite festgelegt, wir haben eine border-radius eingefügt um den Ball rund zu machen  und haben in die position absolut gegeben sodass er immer gleich startet*/
+
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+
+
+
+
+
